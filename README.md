@@ -42,6 +42,31 @@ chown -R 1000:1000 www
 nano /root/web/services/caddy/etc/caddy/Caddyfile
 ```
 
+#### 网站示例：
+PHP
+```
+hellobitch.com {
+        root * /srv/hellobitch.com
+        encode gzip
+        file_server
+        php_fastcgi php:9000
+}
+```
+静态
+```
+hellobitch.com {
+        root * /srv/hellobitch.com
+        encode gzip
+        file_server
+}
+```
+反代
+```
+hellobitch.com {
+        reverse_proxy https://you.are.bitch:443
+}
+```
+
 
 ## 注意事项：
 1. www下文件权限为644，文件夹权限为755.请勿使用777，这会带来安全风险
