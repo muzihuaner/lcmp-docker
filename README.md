@@ -14,6 +14,9 @@ https://github.com/lhuang001/lcmp-docker
 ```
 git clone https://github.com/codionx/lcmp-docker.git
 ```
+```
+mv lcmp-docker web
+```
 
 2. 修改docker-compose配置
 
