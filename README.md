@@ -1,3 +1,11 @@
+# 原版地址
+
+https://github.com/lhuang001/lcmp-docker
+
+# 修改描述
+
+若自行部署mysql或使用第三方数据库，则不需要再另行安装mysql
+
 # 使用教程
 1. cp docker-compose.yml.sample  docker-compose.yml
 2. cp .env.sample .env
