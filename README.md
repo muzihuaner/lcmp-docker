@@ -7,6 +7,7 @@ https://github.com/lhuang001/lcmp-docker
 
 若自行部署mysql或使用第三方数据库，则不需要再另行安装mysql
 
+<br /><br />
 
 # 使用教程
 **1. 拉取**
@@ -66,6 +67,7 @@ chown -R 1000:1000 www
 ```
 docker-compose up -d
 ```
+<br /><br />
 
 ## 注意事项：
 **1. www下文件权限为644，文件夹权限为755.请勿使用777，这会带来安全风险**
