@@ -17,6 +17,9 @@ git clone https://github.com/codionx/lcmp-docker.git
 ```
 mv lcmp-docker web
 ```
+```
+cd web
+```
 
 2. 修改docker-compose配置
 
