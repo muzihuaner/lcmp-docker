@@ -33,7 +33,10 @@ docker-compose up -d
 
 4. 上传代码到项目目录www目录下
 
-5. 在项目根目录执行chown -R 1000:1000 www, 避免php程序没有对应权限
+5. 在项目根目录授权, 避免php程序没有对应权限
+```
+chown -R 1000:1000 www
+```
 6. 修改Caddyfile文件，配置caddy代理
 ```
 nano /root/web/services/caddy/etc/caddy/Caddyfile
