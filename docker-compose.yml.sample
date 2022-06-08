@@ -16,7 +16,7 @@ services:
       TZ: "$TZ"
     restart: always
     networks:
-      - default
+      - web-service
 
   php:
     build:
@@ -38,20 +38,7 @@ services:
     cap_add:
       - SYS_PTRACE
     networks:
-      - default
-
-  mysql5:
-    image: mysql:${MYSQL5_VERSION}
-    container_name: mysql5
-    volumes:
-      - ${MYSQL5_CONF_FILE}:/etc/mysql/conf.d/mysql.cnf:ro
-      - ${DATA_DIR}/mysql5:/var/lib/mysql/:rw
-    restart: always
-    networks:
-      - default
-    environment:
-      MYSQL_ROOT_PASSWORD: "${MYSQL5_ROOT_PASSWORD}"
-      TZ: "$TZ"
+      - web-service
 
 networks:
-  default:
+  web-service:
