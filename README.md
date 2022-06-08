@@ -9,13 +9,34 @@ https://github.com/lhuang001/lcmp-docker
 
 
 # 使用教程
-1. cp docker-compose.yml.sample  docker-compose.yml
-2. cp .env.sample .env
-3. cp services/caddy/etc/caddy/Caddyfile.sample services/caddy/etc/caddy/Caddyfile
-4. 切换到项目根目录，docker-compose up -d启动项目
-5. 上传代码到www目录下
-6. 在根目录执行chown -R 1000:1000 www, 避免php程序没有对应权限
-7. 修改services/caddy/etc/caddy/Caddyfile文件，配置caddy代理
+1. 拉取
+
+```
+https://github.com/codionx/lcmp-docker.git
+```
+
+2. 修改docker-compose配置
+
+```
+cp docker-compose.yml.sample  docker-compose.yml
+```
+
+3. 修改env
+
+```
+cp .env.sample .env
+```
+
+4. 修改caddy配置文件
+
+```
+cp services/caddy/etc/caddy/Caddyfile.sample services/caddy/etc/caddy/Caddyfile
+```
+
+5. 切换到项目根目录，docker-compose up -d启动项目
+6. 上传代码到www目录下
+7. 在根目录执行chown -R 1000:1000 www, 避免php程序没有对应权限
+8. 修改services/caddy/etc/caddy/Caddyfile文件，配置caddy代理
 
 
 ## 注意事项：
