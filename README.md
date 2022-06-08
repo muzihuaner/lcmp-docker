@@ -25,19 +25,7 @@ cp .env.sample .env
 cp services/caddy/etc/caddy/Caddyfile.sample services/caddy/etc/caddy/Caddyfile
 ```
 
-3. 在项目目录启动
-
-```
-docker-compose up -d
-```
-
-4. 上传代码到项目目录www目录下
-
-5. 在项目根目录授权, 避免php程序没有对应权限
-```
-chown -R 1000:1000 www
-```
-6. 修改Caddyfile文件，配置caddy代理
+3. 修改Caddyfile文件，配置caddy代理
 ```
 nano /root/web/services/caddy/etc/caddy/Caddyfile
 ```
@@ -63,10 +51,21 @@ hellobitch.com {
 反代
 ```
 hellobitch.com {
-        reverse_proxy https://you.are.bitch:443
+        reverse_proxy http://you.are.bitch
 }
 ```
 
+4. 上传代码到`~/web/www/`目录下
+
+5. 在`~/web/`目录授权, 避免php程序没有对应权限
+```
+chown -R 1000:1000 www
+```
+6. 在项目目录启动
+
+```
+docker-compose up -d
+```
 
 ## 注意事项：
 1. www下文件权限为644，文件夹权限为755.请勿使用777，这会带来安全风险
