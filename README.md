@@ -12,7 +12,7 @@ https://github.com/lhuang001/lcmp-docker
 1. 拉取
 
 ```
-https://github.com/codionx/lcmp-docker.git
+git clone https://github.com/codionx/lcmp-docker.git
 ```
 
 2. 修改docker-compose配置
