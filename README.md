@@ -13,7 +13,7 @@ https://github.com/lhuang001/lcmp-docker
 **1. 拉取**
 
 ```
-git clone https://github.com/codionx/lcmp-docker.git
+git clone https://github.com/muzihuaner/lcmp-docker.git
 mv lcmp-docker web
 cd web
 ```
